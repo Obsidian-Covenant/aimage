@@ -39,3 +39,25 @@
 
 # debug information files
 *.dwo
+
+# Temp Files
+
+*cache
+src/.deps
+src/aimage
+src/Makefile
+src/Makefile.in
+aclocal.m4
+aimage.spec
+compile
+config.h
+config.h.ini
+config.log
+config.status
+configure
+depcomp
+install-sh
+Makefile
+Makefile.in
+missing
+stamp-h1

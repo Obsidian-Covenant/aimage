@@ -1,0 +1,42 @@
+Summary: aimage
+Name: aimage
+Version: @VERSION@
+Release: 1
+License: BSD with advertising
+Group: System Environment/Base
+URL: http://www.afflib.org/aimage.php
+Source0: http://www.afflib.org/downloads/aimage-3.1.0.tar.gz
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
+BuildRequires: afflib
+
+%description
+aimage is the Advanced Disk Imager.
+
+With Version 3.1 the aimage package has been removed from AFF and re-packaged
+as a stand-alone install. This is to allow more rapid development of aimage
+without impacting the use or certificate of AFFLIB.
+
+%prep
+%setup -n %{name}-%{version}
+%configure --prefix=/usr --mandir=/usr/share/man --bindir=/usr/bin
+
+%build
+%{__make}
+
+%install
+%{__rm} -rf %{buildroot}
+%{__install} -Dp -m755 src/aimage %{buildroot}%{_bindir}/aimage
+#%{__install} -Dp -m644 aimage.1 %{buildroot}%{_mandir}/man1/aimage.1
+
+%clean
+%{__rm} -rf %{buildroot}
+
+%files
+%defattr(-, root, root, 0755)
+%doc LICENSE INSTALL README.md
+%{_bindir}/aimage
+#%{_mandir}/man1/aimage.1
+
+%changelog
+* Mon Apr 14 2008 
+- Initial spec file

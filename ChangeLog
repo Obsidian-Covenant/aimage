@@ -1,0 +1,73 @@
+2025-12-02  Obsidian Covenant
+
+	* project refactored and modernized
+
+2011-08-17  Simson Garfinkel  <simsong@imac3.local>
+
+	* configure.ac: upgraded version to 3.2.5
+
+2009-11-30  Simson L. Garfinkel  <simsong@Silver-SSD.local>
+
+	* src/aimage.cpp (process_config_questions): fixed crasher bug when running with a config file and with no LIBREADLINE
+
+2009-11-26  Simson Garfinkel  <simsong@Silver-Surfer.local>
+
+	* src/imager.h: created option -2, --multithreaded
+
+2009-11-23  root  <root@image01>
+
+	* src/imager.cpp (imager::start_imaging): fixed for threaded_hash.
+
+2009-10-22  Simson Garfinkel  <simsong@142.sub-75-226-173.myvzw.com>
+
+	* configure.ac: updated to version 3.2.3
+
+2009-10-22  Simson Garfinkel  <simsong@t>
+
+	* configure.ac: fixed the optimization flag stuff.
+
+	* imager.cpp & imager.h: modified to work with threaded_hash and EVP system
+
+2009-09-05  Simson Garfinkel  <simsong@imac2.local>
+
+	* configure.ac: minor changes to compile under GCC +4.4
+
+2009-05-19  Simson Garfinkel  <simsong@m.ern.nps.edu>
+
+	* configure.ac: updated config file
+
+2009-01-27  Simson Garfinkel  <simsong@Silver-Surfer.local>
+
+	* src/imager.cpp (imager::start_imaging): now calls af_set_acquisition_date() to set the acquisition date.
+
+2008-10-03  Simson Garfinkel  <simsong@copy.ern.nps.edu>
+
+	* src/aimage.cpp (main): fixed handling of %d for filenames; now actually reads the directory, so it will work with any format.
+
+2008-09-12  Simson Garfinkel  <simsong@copy.ern.nps.edu>
+
+	* configure.ac: updated version to 3.2.0
+
+2008-09-12  root  <root@copy.ern.nps.edu>
+
+	* src/aimage_os.cpp (imager::ident): removed call to system_profiler under MacOS.
+
+	* src/ident.cpp (getvalue): cleaned up some string values being passed as constants.
+
+2008-07-10  Simson Garfinkel  <simsong@imac2.local>
+
+	* src/aimage.cpp: now warns if no extension is provided.
+
+2008-05-23  Simson Garfinkel  <simsong@copy.ern.nps.edu>
+
+	* src/aimage.cpp: replaced imagers array with an STL vector;
+	memory allocation problem observed on FreeBSD 7.0 dissappeared.
+
+
+	* src/ident.cpp (ident::dmesg): massive changes to handle const
+	char * properly for new compiler.
+
+2008-02-25  Simson Garfinkel  <simsong@m.ern.nps.edu>
+
+	* Created aimage as a saparate project.
+
